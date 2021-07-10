@@ -19,8 +19,8 @@ const ListTask = () => {
         <div>
 <Card style={{ width: '18rem' }}>
   <Card.Body style={{textAlign:'center'}}>
-    <Card.Title>{task.id}</Card.Title><br/>
-    <Card.Text>{task.description}</Card.Text><br/>
+    <Card.Title>Task Id: {task.id}</Card.Title><br/>
+    <Card.Text>Description: {task.description}</Card.Text><br/>
     {task.done==='done' ?<Button variant="green" style={{backgroundColor:'green'}}>{task.done}</Button>:
         <Button variant="green" style={{backgroundColor:'red'}}>{task.done}</Button>}<br/><br/>
     <Link to ={{pathname:`/Edit_task/${task.id}`,task:{id:task.id,description:task.description,done:task.done}}} style={{textDecoration:'none'}} ><Card.Text>Edit Task</Card.Text></Link>
@@ -29,10 +29,10 @@ const ListTask = () => {
         </div> 
     ):tasks.map((task) =>
     <div>
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '18rem' ,borderRadius:'3%'}}>
 <Card.Body style={{textAlign:'center'}}>
-<Card.Title>{task.id}</Card.Title><br/>
-<Card.Text>{task.description}</Card.Text><br/>
+<Card.Title>Task Id: {task.id}</Card.Title><br/>
+<Card.Text>Description: {task.description}</Card.Text><br/>
 {task.done==='done' ?<Button variant="green" style={{backgroundColor:'green'}}>{task.done}</Button>:
     <Button variant="green" style={{backgroundColor:'red'}}>{task.done}</Button>}<br/><br/>
 <Link to ={{pathname:`/Edit_task/${task.id}`,task:{id:task.id,description:task.description,done:task.done}}} style={{textDecoration:'none'}} ><Card.Text>Edit Task</Card.Text></Link>
