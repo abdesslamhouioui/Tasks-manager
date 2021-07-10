@@ -20,10 +20,10 @@ const AddTask=()=>{
     <Modal.Body>
         <Form>
         <Form.Group>
-            <Form.Control placeholder="Id" onChange={e => setnewtask({...newtask,[e.target.placeholder]:e.target.value})}/>
+            <Form.Control placeholder="Id" id='id'onChange={e => setnewtask({...newtask,[e.target.id]:e.target.value})}/>
         </Form.Group><br/><br/>
         <Form.Group>
-            <Form.Control placeholder="Description" onChange={e => setnewtask({...newtask,[e.target.placeholder]:e.target.value})}/>
+            <Form.Control placeholder='Description' id="description" onChange={e => setnewtask({...newtask,[e.target.id]:e.target.value})}/>
         </Form.Group><br/>
         <Form.Group>
         <Form.Label>Is Done</Form.Label>
